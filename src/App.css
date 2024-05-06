@@ -582,7 +582,7 @@ html{
 }
 /* SECCION CONTACTO */
 .contacto{
-    background-image: url(assets/img/fondo_contacto.png);
+    background-image: url(/assets/img/fondo_contacto.png);
     background-color: var(--bg-color-primary);
     color: var(--text-color-main);
     padding: 50px 0;
