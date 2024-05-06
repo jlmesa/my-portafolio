@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "nombre": "Juego Triki",
+    "descripcion": "Juego de rompecabezas para dos personas ❌ y ⚪",
+    "imagen": "assets/img/juegotriki.png",
+    "tecnologias": ["React JS", "JavaScript", "Vite"],
+    "url": [
+      {
+        "repositorio": "https://github.com/jlmesa/juego-triki",
+        "linkApp": "https://juego-triki.netlify.app/"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "JavaScript Quiz",
+    "descripcion": "Cuestionario para medir tus conocimientos en JavaScript",
+    "imagen": "assets/img/quiz.png",
+    "tecnologias": ["React JS", "TypeScript", "Vite", "Zustand"],
+    "url": [
+      {
+        "repositorio": "https://github.com/jlmesa/juego-javascript-quiz",
+        "linkApp": "https://javascript-quiz-jmdev.netlify.app/"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Aplicación del Clima",
+    "descripcion": "Crear una aplicación web que muestre la temperatura actual y pronóstico del clima en diferentes ciudades.",
+    "imagen": "assets/img/juegotriki.png",
+    "tecnologias": ["Node.js", "Express", "React JS", "Tailwind CSS"],
+    "url": [
+      {
+        "repositorio": "https://gitlab.com/jlmesa/clima",
+        "linkApp": "https://jclima.herokuapp.com/"
+      }
+    ]
+  }
+]
