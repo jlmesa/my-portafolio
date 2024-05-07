@@ -11,7 +11,9 @@ import "./App.css";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
-  const [darkMode, setDarkMode] = useState(localStorage.getItem("darkMode") === 'true');
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("darkMode") === "true"
+  );
 
   const handleShowMenu = () => {
     setShowMenu(!showMenu);
@@ -24,7 +26,7 @@ function App() {
   };
 
   useEffect(() => {
-    const isDarkMode = localStorage.getItem("darkMode") === 'true';
+    const isDarkMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(isDarkMode);
   }, []);
 
@@ -36,13 +38,21 @@ function App() {
             <a href="#inicio">JM</a>
           </div>
           <button onClick={toggleDarkMode}>
-            { darkMode ? <i className="fa-sharp fa-solid fa-sun fa-2xl"></i> : <i className="fa-sharp fa-solid fa-moon fa-2xl"></i> }
+            {darkMode ? (
+              <abbr title="Modo Claro">
+                <i className="fa-sharp fa-solid fa-sun fa-2xl"></i>
+              </abbr>
+            ) : (
+              <abbr title="Modo Oscuro">
+                <i className="fa-sharp fa-solid fa-moon fa-2xl"></i>
+              </abbr>
+            )}
           </button>
           <nav id="nav" className={showMenu ? "responsive" : ""}>
             <ul>
               <li>
                 <a href="#inicio" onClick={() => setShowMenu(false)}>
-                INICIO
+                  INICIO
                 </a>
               </li>
               <li>
@@ -73,7 +83,11 @@ function App() {
             </ul>
           </nav>
           <div className="nav-responsive" onClick={handleShowMenu}>
-            { showMenu ? <i className="fa-solid fa-xmark"></i> : <i className="fa-solid fa-bars"></i> }           
+            {showMenu ? (
+              <i className="fa-solid fa-xmark"></i>
+            ) : (
+              <i className="fa-solid fa-bars"></i>
+            )}
           </div>
         </header>
       </div>
@@ -88,34 +102,45 @@ function App() {
         </div>
       </section>
 
-      <section id="habilidades" className={`habilidades ${!darkMode && "light-mode"}`}>
+      <section
+        id="habilidades"
+        className={`habilidades ${!darkMode && "light-mode"}`}
+      >
         <div className="contenido-seccion">
           <Habilidades />
         </div>
       </section>
 
-      <section id="curriculum" className={`curriculum ${!darkMode && "light-mode"}`}>
+      <section
+        id="curriculum"
+        className={`curriculum ${!darkMode && "light-mode"}`}
+      >
         <div className="contenido-seccion">
           <Curriculum />
         </div>
       </section>
 
-      <section id="proyectos" className={`proyectos ${!darkMode && "light-mode"}`}>
+      <section
+        id="proyectos"
+        className={`proyectos ${!darkMode && "light-mode"}`}
+      >
         <div className="contenido-seccion">
           <Proyectos proyectos={proyectos} />
         </div>
       </section>
 
-      <section id="contacto" className={`contacto ${!darkMode && "light-mode"}`}>
+      <section
+        id="contacto"
+        className={`contacto ${!darkMode && "light-mode"}`}
+      >
         <div className="contenido-seccion">
-            <Contacto />
+          <Contacto />
         </div>
-    </section>
+      </section>
 
-    <section className={`footer ${!darkMode && "light-mode"}`}>
-      <Footer />
-    </section>
-    
+      <section className={`footer ${!darkMode && "light-mode"}`}>
+        <Footer />
+      </section>
     </>
   );
 }
